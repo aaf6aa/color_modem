@@ -8,6 +8,11 @@ https://github.com/aaf6aa/color_modem/blob/212c3e817607056b313ce4eea58c24ba0fe5d
 https://github.com/aaf6aa/color_modem/blob/212c3e817607056b313ce4eea58c24ba0fe5d16e/data.py#L765
 The augmentations and their order can be changed just above the following lines.
 
+## Source frame
+![1722107434 4756963](https://github.com/user-attachments/assets/9a06b78f-4785-4b37-9e62-d8b0575e5aca)
+## Generated LRs
+![1722107434 4756963__merge](https://github.com/user-attachments/assets/295c3cf7-0123-43d3-9f94-358216e51062)
+
 # Original README: kFYatek/Color Modem
 
 A little project that replicates effects of analog TV color standards in
