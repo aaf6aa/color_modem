@@ -44,7 +44,7 @@ def iirfilter(N, Wn, rp=None, rs=None, btype='band', ftype='butter', shift=True)
 def iirdesign(wp, ws, gpass, gstop, ftype='butter', shift=True):
     smallest = numpy.nextafter(0.0, 1.0)
     largest = numpy.nextafter(1.0, 0.0)
-    b, a = scipy.signal.iirdesign(numpy.maximum(wp, smallest), numpy.minimum(ws, largest), gpass, gstop, ftype=ftype)
+    b, a = scipy.signal.iirdesign(numpy.abs(numpy.maximum(wp, smallest)), numpy.abs(numpy.minimum(ws, largest)), gpass, gstop, ftype=ftype)
     btype = 'band'
     if len(numpy.atleast_1d(wp)) > 1 and len(numpy.atleast_1d(ws)) > 1 and ws[0] > wp[0]:
         btype = 'bandstop'
