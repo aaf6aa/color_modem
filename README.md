@@ -1,4 +1,14 @@
-# Color Modem
+# Analog-like video augmentation pipeline
+The data.py uses [Color Modem](https://github.com/kFYatek/color_modem) and other augmentations to generate frame tuples for training single-frame and video super resolution models for restoring analog anime; this pipeline was used to generate the dataset for [TSCUNet](https://github.com/aaf6aa/scunet). The script takes in a single source image and generates N HR and LR frames, with N being the period of the VSR model (5 in the case of TSCUNet).
+
+To change N, change this line: https://github.com/aaf6aa/color_modem/blob/212c3e817607056b313ce4eea58c24ba0fe5d16e/data.py#L727
+The source and destination directories:
+https://github.com/aaf6aa/color_modem/blob/212c3e817607056b313ce4eea58c24ba0fe5d16e/data.py#L761
+https://github.com/aaf6aa/color_modem/blob/212c3e817607056b313ce4eea58c24ba0fe5d16e/data.py#L764
+https://github.com/aaf6aa/color_modem/blob/212c3e817607056b313ce4eea58c24ba0fe5d16e/data.py#L765
+The augmentations and their order can be changed just above the following lines.
+
+# Original README: kFYatek/Color Modem
 
 A little project that replicates effects of analog TV color standards in
 software. Written mostly to educate myself on how these standards work, and on
